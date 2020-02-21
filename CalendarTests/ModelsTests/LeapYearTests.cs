@@ -9,8 +9,20 @@ namespace CalendarTests
     [TestMethod]
     public void IsLeapYear_NumberDivisibleByFour_True()
     {
-      LeapYear testLeapYear = new LeapYear();
-      Assert.AreEqual(true, testLeapYear.IsLeapYear(2012));
+      
+      Assert.AreEqual(true, LeapYear.IsLeapYear(2012));
     }
+    [TestMethod]
+    public void IsLeapYear_NumberDivisiblebyFourHundred_True()
+    {
+      Assert.AreEqual(true, LeapYear.IsLeapYear(2000));
+    }
+
+    [TestMethod]
+    public void IsLeapYear_NumberDivisiblebyOneHundred_False()
+    {
+      Assert.AreEqual(false, LeapYear.IsLeapYear(1900));
+    }
+
   }
 }
